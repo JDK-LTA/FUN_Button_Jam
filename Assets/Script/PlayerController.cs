@@ -5,7 +5,7 @@ using UnityEngine;
 public class PlayerController : MonoBehaviour
 {
     public float speed;
-    float moveHorizontal = 1;
+    public float moveHorizontal = 1;
     public GameObject lworld;
     public GameObject dworld;
     SpriteRenderer playerRenderer;
