@@ -12,6 +12,7 @@ public class PlayerController : MonoBehaviour
     SpriteRenderer playerRenderer;
     Camera cameraRef;
     bool isLightworld = true;
+    WorldManager WMRef;
 
 
     // Start is called before the first frame update
@@ -19,7 +20,7 @@ public class PlayerController : MonoBehaviour
     {
         Time.timeScale = 0;
         playerRenderer = GetComponentInChildren<SpriteRenderer>();
-        ChangeWorld();
+        WMRef = FindObjectOfType<WorldManager>();
     }
 
     // Update is called once per frame
@@ -33,11 +34,10 @@ public class PlayerController : MonoBehaviour
             }
             else
             {
-                moveHorizontal *= -1;
-                isLightworld = !isLightworld;
-                ChangeWorld();
+                WMRef.WorldSwap();
             }
-            
+
+           
         }
 
         transform.Translate(Vector3.right * moveHorizontal * Time.deltaTime * speed);
