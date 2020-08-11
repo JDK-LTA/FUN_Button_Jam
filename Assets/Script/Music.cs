@@ -18,6 +18,7 @@ public class Music : MonoBehaviour
     {
         a = GetComponent<AudioSource>();
         GameManager.Instance.OnWorldChanging += PlayNote;
+        notesPerChord = 4;
     }
 
     void PlayNote()
