@@ -17,6 +17,7 @@ public class PlayerController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        Time.timeScale = 0;
         playerRenderer = GetComponentInChildren<SpriteRenderer>();
         ChangeWorld();
     }
@@ -26,9 +27,17 @@ public class PlayerController : MonoBehaviour
     {
         if (Input.GetKeyDown("space"))
         {
-            moveHorizontal *= -1;
-            isLightworld = !isLightworld;
-            ChangeWorld();
+            if (Time.timeScale == 0)
+            {
+                Time.timeScale = 1;
+            }
+            else
+            {
+                moveHorizontal *= -1;
+                isLightworld = !isLightworld;
+                ChangeWorld();
+            }
+            
         }
 
         transform.Translate(Vector3.right * moveHorizontal * Time.deltaTime * speed);
@@ -56,6 +65,11 @@ public class PlayerController : MonoBehaviour
     public void DIE()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+    }
+
+    public void NextLevel()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
     }
 }
 
