@@ -46,6 +46,7 @@ public class PlayerController : MonoBehaviour
 
     private void ChangeWorld()
     {
+        GameManager.Instance.ChangeWorld();
         if (isLightworld)
         {
             dworld.SetActive(false);
