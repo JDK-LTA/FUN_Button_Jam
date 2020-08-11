@@ -18,7 +18,7 @@ MonoBehaviour:
     value: 1
   intensity:
     overrideState: 1
-    value: 45
+    value: 22
   intensityX:
     overrideState: 0
     value: 1
@@ -137,13 +137,13 @@ MonoBehaviour:
     overrideState: 0
     value: 100
   lift:
-    overrideState: 1
+    overrideState: 0
     value: {x: 0.96585494, y: 0.9623704, z: 1, w: 0.042223785}
   gamma:
-    overrideState: 1
+    overrideState: 0
     value: {x: 0.9937258, y: 1, z: 0.9136377, w: 0.091484964}
   gain:
-    overrideState: 1
+    overrideState: 0
     value: {x: 0.9775426, y: 1, z: 0.9789236, w: 0.077410266}
   masterCurve:
     overrideState: 0
@@ -1367,9 +1367,9 @@ MonoBehaviour:
     defaultState: 1
   intensity:
     overrideState: 1
-    value: 0.5
+    value: 0.28
   fastMode:
-    overrideState: 0
+    overrideState: 1
     value: 0
 --- !u!114 &11400000
 MonoBehaviour:
@@ -1406,7 +1406,7 @@ MonoBehaviour:
     value: 1
   intensity:
     overrideState: 1
-    value: 0.2
+    value: 1.54
   threshold:
     overrideState: 0
     value: 1
