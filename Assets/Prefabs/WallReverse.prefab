@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 5386872830502492241}
   - component: {fileID: 5386872830502492240}
   - component: {fileID: 5386872830502492247}
+  - component: {fileID: 4561746866103390133}
   m_Layer: 0
   m_Name: WallReverse
   m_TagString: Untagged
@@ -122,3 +123,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 077e79630564fc84d8cc2c6c1029f1a0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &4561746866103390133
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5386872830502492245}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 56cce70e695ab7644896b7150c4e355c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isVisibleWhenDeactivated: 1
+  shouldHaveCollision: 1
+  ActiveColor: {r: 1, g: 1, b: 1, a: 1}
+  UnactiveColor: {r: 0, g: 0, b: 0, a: 1}
+  World: 0
