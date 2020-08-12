@@ -136,7 +136,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isVisibleWhenDeactivated: 1
-  isWall: 1
+  shouldHaveCollision: 1
   ActiveColor: {r: 1, g: 1, b: 1, a: 1}
   UnactiveColor: {r: 0, g: 0, b: 0, a: 1}
   World: 0
