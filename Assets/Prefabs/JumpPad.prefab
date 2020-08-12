@@ -136,8 +136,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 56cce70e695ab7644896b7150c4e355c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isVisibleWhenDeactivated: 0
+  isVisibleWhenDeactivated: 1
   isWall: 0
   ActiveColor: {r: 0.23740657, g: 0.9150943, b: 0.56818277, a: 1}
   UnactiveColor: {r: 0.6261125, g: 0.6603774, b: 0.6432449, a: 1}
-  World: 1
+  World: 0

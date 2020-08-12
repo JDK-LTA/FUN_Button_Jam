@@ -7,7 +7,7 @@ public class WorldConfigurator : MonoBehaviour
     // Start is called before the first frame update
     
     public bool isVisibleWhenDeactivated;
-    public bool isWall;
+    public bool shouldHaveCollision;
     public Color ActiveColor;
     public Color UnactiveColor;
     SpriteRenderer sprtRend;
@@ -43,7 +43,7 @@ public class WorldConfigurator : MonoBehaviour
         }
         else
         {
-            if (isWall)
+            if (shouldHaveCollision)
             {
 
             }
