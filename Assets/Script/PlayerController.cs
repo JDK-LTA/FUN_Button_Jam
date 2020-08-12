@@ -34,9 +34,9 @@ public class PlayerController : MonoBehaviour
             }
             else
             {
-                //WMRef.WorldSwap();    //Perdon a quien estuviera con esto, estoy probando música.
-                ChangeWorld();
-                
+                WMRef.WorldSwap();    //Perdon a quien estuviera con esto, estoy probando música.
+                GameManager.Instance.ChangeWorld();
+                moveHorizontal *= -1;
             }
 
            
@@ -48,8 +48,8 @@ public class PlayerController : MonoBehaviour
 
     private void ChangeWorld()
     {
-        GameManager.Instance.ChangeWorld(); //Lo comentado anterior es para poder ejecutar esto.
-        moveHorizontal *= -1; // El jugador no se movía, he puesto aqui su control.
+         //Lo comentado anterior es para poder ejecutar esto.
+         // El jugador no se movía, he puesto aqui su control.
         if (isLightworld)
         {
             dworld.SetActive(false);
