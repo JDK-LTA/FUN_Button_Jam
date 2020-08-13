@@ -1491,6 +1491,22 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 4561746866103390133, guid: f0a827fdf43f82245be1c148170d2eb3, type: 3}
+      propertyPath: shouldHaveCollision
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4561746866103390133, guid: f0a827fdf43f82245be1c148170d2eb3, type: 3}
+      propertyPath: UnactiveColor.r
+      value: 0.4339623
+      objectReference: {fileID: 0}
+    - target: {fileID: 4561746866103390133, guid: f0a827fdf43f82245be1c148170d2eb3, type: 3}
+      propertyPath: UnactiveColor.g
+      value: 0.4339623
+      objectReference: {fileID: 0}
+    - target: {fileID: 4561746866103390133, guid: f0a827fdf43f82245be1c148170d2eb3, type: 3}
+      propertyPath: UnactiveColor.b
+      value: 0.4339623
+      objectReference: {fileID: 0}
     - target: {fileID: 5386872830502492245, guid: f0a827fdf43f82245be1c148170d2eb3, type: 3}
       propertyPath: m_Name
       value: WallReverse
