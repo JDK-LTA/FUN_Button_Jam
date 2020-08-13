@@ -1081,7 +1081,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 33688372fde0f0546a4476cac404f789, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sceneToLoad: Lv2
+  sceneToLoad: LvUpChange
 --- !u!212 &1193112921
 SpriteRenderer:
   m_ObjectHideFlags: 0
