@@ -569,7 +569,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1427381595
 Transform:
   m_ObjectHideFlags: 0
@@ -699,28 +699,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 5386872830502492246, guid: f0a827fdf43f82245be1c148170d2eb3, type: 3}
   m_PrefabInstance: {fileID: 1306688815}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &1846654480 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1071480871894645095, guid: 1a5c3cc0abcbbc44ebde1da8a89a7c82, type: 3}
-  m_PrefabInstance: {fileID: 2101574860}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1846654484
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1846654480}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 56cce70e695ab7644896b7150c4e355c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  isVisibleWhenDeactivated: 1
-  shouldHaveCollision: 0
-  ActiveColor: {r: 0.5019608, g: 1, b: 0.74509805, a: 1}
-  UnactiveColor: {r: 0.5754717, g: 0.5754717, b: 0.5754717, a: 1}
-  World: 0
 --- !u!1 &2088423085
 GameObject:
   m_ObjectHideFlags: 0
@@ -781,7 +759,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: fbb775bd3b3ff3e4e9d4c667a236420a, type: 3}
-  m_Color: {r: 0.45, g: 0.96333325, b: 1, a: 1}
+  m_Color: {r: 0.17590779, g: 0.60275036, b: 0.6320754, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -854,10 +832,6 @@ PrefabInstance:
     - target: {fileID: 1071480871894645095, guid: 1a5c3cc0abcbbc44ebde1da8a89a7c82, type: 3}
       propertyPath: m_Name
       value: JumpPad
-      objectReference: {fileID: 0}
-    - target: {fileID: 1071480871894645095, guid: 1a5c3cc0abcbbc44ebde1da8a89a7c82, type: 3}
-      propertyPath: m_IsActive
-      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1071480871894645114, guid: 1a5c3cc0abcbbc44ebde1da8a89a7c82, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1020,6 +994,10 @@ PrefabInstance:
     - target: {fileID: 2151805291434779674, guid: 3dd0cf23b1c655d48ba197e603a68ba1, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2151805291486631366, guid: 3dd0cf23b1c655d48ba197e603a68ba1, type: 3}
+      propertyPath: m_fontStyle
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3dd0cf23b1c655d48ba197e603a68ba1, type: 3}
