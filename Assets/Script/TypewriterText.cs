@@ -6,6 +6,7 @@ using TMPro;
 public class TypewriterText : MonoBehaviour
 {
     public float readingSpeed;
+    public string preTextToRead;
     float speedHelper;
     public string textToRead;
     string texttoToUpdate;
@@ -13,6 +14,7 @@ public class TypewriterText : MonoBehaviour
     TextMeshProUGUI textBox;
     float textFade = 1f;
     AudioSource audio;
+    public bool shouldDelete = false;
  
     // Start is called before the first frame update
     private void Start()
@@ -32,7 +34,7 @@ public class TypewriterText : MonoBehaviour
         {
             if (i <= textToRead.Length)
             {
-                texttoToUpdate = textToRead.Substring(0, i);
+                texttoToUpdate = preTextToRead + textToRead.Substring(0, i);
                 textBox.text = texttoToUpdate;
                 speedHelper = readingSpeed;
                 i++;
@@ -44,7 +46,10 @@ public class TypewriterText : MonoBehaviour
                 textFade -= Time.deltaTime;
                 if (textFade <= 0)
                 {
-                    textBox.text = "";
+                    if (shouldDelete)
+                    {
+                        textBox.text = "";
+                    }
                     Destroy(gameObject);
                 }
             }
