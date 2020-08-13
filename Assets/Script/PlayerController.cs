@@ -61,11 +61,12 @@ public class PlayerController : MonoBehaviour
     {
         if (exitedZoomZone)
         {
+            Vector3 playerCamerapos = transform.position - Vector3.forward * 10;
             cam.orthographicSize = Mathf.Lerp(cam.orthographicSize, originalZoom, Time.deltaTime * 3);
-            if(Vector3.Distance(cam.transform.position, transform.position) <= 0.1f)
-                cam.transform.position = Vector3.SmoothDamp(cam.transform.position, transform.position, ref velocity, 0.5f);
+            if(Vector2.Distance(cam.transform.position, transform.position) >= 0.1f)
+                cam.transform.position = Vector3.SmoothDamp(cam.transform.position, playerCamerapos, ref velocity, 0.5f);
             if (cam.orthographicSize > originalZoom && cam.orthographicSize - 0.1f <= originalZoom ||
-               cam.orthographicSize < originalZoom && cam.orthographicSize + 0.1f >= originalZoom && Vector3.Distance(cam.transform.position, transform.position)<= 0.1f)
+               cam.orthographicSize < originalZoom && cam.orthographicSize + 0.1f >= originalZoom && Vector2.Distance(cam.transform.position, transform.position)<= 0.1f)
             {
                 exitedZoomZone = false;
             }
@@ -109,6 +110,7 @@ public class PlayerController : MonoBehaviour
             cam.orthographicSize = Mathf.Lerp(cam.orthographicSize, collision.GetComponent<ZoomZone>().targetZoom, Time.deltaTime*collision.GetComponent<ZoomZone>().transitionSpeed);
             if (collision.GetComponent<ZoomZone>().focusPoint != Vector3.zero)
             {
+                targetCamera = collision.GetComponent<ZoomZone>().focusPoint;
                 var bounds = new Bounds(transform.position, Vector3.zero);
                 bounds.Encapsulate(transform.position);
                 bounds.Encapsulate(targetCamera);
