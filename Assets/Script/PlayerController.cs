@@ -7,13 +7,16 @@ public class PlayerController : MonoBehaviour
 {
     public float speed;
     public float moveHorizontal = 1;
-    public GameObject lworld;
-    public GameObject dworld;
+    //public GameObject lworld;
+    //public GameObject dworld;
     SpriteRenderer playerRenderer;
     Camera cameraRef;
     bool isLightworld = true;
     WorldManager WMRef;
-
+    Animator anim;
+    Camera cam;
+    float originalZoom;
+    bool exitedZoomZone;
 
     // Start is called before the first frame update
     void Start()
@@ -21,6 +24,10 @@ public class PlayerController : MonoBehaviour
         Time.timeScale = 0;
         playerRenderer = GetComponentInChildren<SpriteRenderer>();
         WMRef = FindObjectOfType<WorldManager>();
+        anim = transform.GetComponentInChildren<Animator>();
+
+        cam = Camera.main;
+        originalZoom = cam.orthographicSize;
     }
 
     // Update is called once per frame
@@ -34,22 +41,36 @@ public class PlayerController : MonoBehaviour
             }
             else
             {
-                WMRef.WorldSwap();    //Perdon a quien estuviera con esto, estoy probando música.
+                WMRef.WorldSwap();
                 GameManager.Instance.ChangeWorld();
                 moveHorizontal *= -1;
+                anim.SetTrigger("Switch");
             }
 
-           
+
         }
 
         transform.Translate(Vector3.right * moveHorizontal * Time.deltaTime * speed);
+        CameraControlZoom();
 
     }
 
-    private void ChangeWorld()
+    private void CameraControlZoom()
     {
-         //Lo comentado anterior es para poder ejecutar esto.
-         // El jugador no se movía, he puesto aqui su control.
+        if (exitedZoomZone)
+        {
+            cam.orthographicSize = Mathf.Lerp(cam.orthographicSize, originalZoom, Time.deltaTime * 3);
+            if (cam.orthographicSize > originalZoom && cam.orthographicSize - 0.1f <= originalZoom ||
+               cam.orthographicSize < originalZoom && cam.orthographicSize + 0.1f >= originalZoom)
+            {
+                exitedZoomZone = false;
+            }
+        }
+    }
+
+    /*private void ChangeWorld()
+    {
+         
         if (isLightworld)
         {
             dworld.SetActive(false);
@@ -64,7 +85,7 @@ public class PlayerController : MonoBehaviour
             playerRenderer.color = Color.black;
             Camera.main.backgroundColor = Color.white;
         }
-    }
+    }*/
 
     public void DIE()
     {
@@ -75,5 +96,23 @@ public class PlayerController : MonoBehaviour
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
     }
+
+    private void OnTriggerStay2D(Collider2D collision)
+    {
+        if (collision.GetComponent<ZoomZone>())
+        {
+            exitedZoomZone = false;
+            cam.orthographicSize = Mathf.Lerp(cam.orthographicSize, collision.GetComponent<ZoomZone>().targetZoom, Time.deltaTime*collision.GetComponent<ZoomZone>().transitionSpeed);
+        }
+            
+    }
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+        if (collision.GetComponent<ZoomZone>())
+        {
+            exitedZoomZone = true;
+        }
+    }
+
 }
 
