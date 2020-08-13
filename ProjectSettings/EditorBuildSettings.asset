@@ -12,9 +12,15 @@ EditorBuildSettings:
     path: Assets/Scenes/Tutorial.unity
     guid: 0c32e91159906314bac3df68fc77de72
   - enabled: 1
+    path: Assets/Scenes/LvElevator.unity
+    guid: 6e27cc19ae527384c80db662b6966058
+  - enabled: 1
     path: Assets/Scenes/LvUpChange.unity
     guid: 08c56fc8bd294304384ed0fe9c8d8aec
   - enabled: 1
-    path: Assets/Scenes/Test.unity
-    guid: e1410a078883fc14180bdae00d26ccde
+    path: Assets/Scenes/SpikeTut.unity
+    guid: 1fa431970f6858647aa688e0870dac83
+  - enabled: 1
+    path: Assets/Scenes/LvFallSpike.unity
+    guid: 8866ab18b121880468723bc5bc9cdc73
   m_configObjects: {}
