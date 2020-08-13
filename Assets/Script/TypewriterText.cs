@@ -10,9 +10,9 @@ public class TypewriterText : MonoBehaviour
     float speedHelper;
     public string textToRead;
     string texttoToUpdate;
-    int i = 0;
+    int i = 1;
     TextMeshProUGUI textBox;
-    float textFade = 1f;
+    public float textFade = 1f;
     AudioSource audio;
     public bool shouldDelete = false;
  
