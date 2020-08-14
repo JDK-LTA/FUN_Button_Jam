@@ -22,15 +22,24 @@ public class TypewriterText : MonoBehaviour
     public bool hasNumber = false;
     int number;
     public string afterNumber = "";
+    public bool pureDeathNumber;
 
  
     // Start is called before the first frame update
     private void Start()
     {
         speedHelper = readingSpeed;
-        textBox = FindObjectOfType<TextMeshPro>();
+        textBox = FindObjectOfType<WorldManager>().GetComponentInChildren<TextMeshPro>();
         audio = GetComponent<AudioSource>();
-        number = 5294 - Blackboard.deathCounter * 7;
+        if (pureDeathNumber)
+        {
+            number = Blackboard.deathCounter;
+        }
+        else
+        {
+            number = 5294 - Blackboard.deathCounter * 7;
+        }
+        
         if (hasNumber)
         {
             textToRead = textToRead + number.ToString() + afterNumber;
