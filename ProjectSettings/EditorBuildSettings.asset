@@ -12,15 +12,33 @@ EditorBuildSettings:
     path: Assets/Scenes/Tutorial.unity
     guid: 0c32e91159906314bac3df68fc77de72
   - enabled: 1
-    path: Assets/Scenes/LvElevator.unity
-    guid: 6e27cc19ae527384c80db662b6966058
-  - enabled: 1
     path: Assets/Scenes/LvUpChange.unity
     guid: 08c56fc8bd294304384ed0fe9c8d8aec
+  - enabled: 1
+    path: Assets/Scenes/LvElevator.unity
+    guid: 6e27cc19ae527384c80db662b6966058
   - enabled: 1
     path: Assets/Scenes/SpikeTut.unity
     guid: 1fa431970f6858647aa688e0870dac83
   - enabled: 1
     path: Assets/Scenes/LvFallSpike.unity
     guid: 8866ab18b121880468723bc5bc9cdc73
+  - enabled: 1
+    path: Assets/Scenes/SpikeLvl1.unity
+    guid: 6c6cc7a4b714b4243971c407077f1929
+  - enabled: 1
+    path: Assets/Scenes/SpikeLvl2.unity
+    guid: 4b276819c68a66a45a0db6bdffb67865
+  - enabled: 1
+    path: Assets/Scenes/SpikeLvl3.unity
+    guid: 45afd019ed1d83642b587d6c4522f96d
+  - enabled: 1
+    path: Assets/Scenes/LvCuadro.unity
+    guid: 74150d640dda98c45a33096c918b67ed
+  - enabled: 1
+    path: Assets/Scenes/SpikeLvl4.unity
+    guid: 9ac322efc9da61f4aae619d5e1b3e207
+  - enabled: 1
+    path: Assets/Scenes/KinderTut.unity
+    guid: a14f03b0eb32fd148893f107edd6ccd1
   m_configObjects: {}
