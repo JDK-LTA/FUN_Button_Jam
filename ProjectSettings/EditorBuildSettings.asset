@@ -41,4 +41,16 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/KinderTut.unity
     guid: a14f03b0eb32fd148893f107edd6ccd1
+  - enabled: 1
+    path: Assets/Scenes/SpikeBlockLvl1.unity
+    guid: 37ce7bcb2369add4db472f89539a74bd
+  - enabled: 1
+    path: Assets/Scenes/SpikeBlockLvl2.unity
+    guid: 250bc57d973d8c44a9eac128ebbf6caf
+  - enabled: 1
+    path: Assets/Scenes/LvDiddly.unity
+    guid: 39ff171aba5f4ab44b85884ae13daab1
+  - enabled: 1
+    path: Assets/Scenes/SpikeBlockLvl3.unity
+    guid: 728c7995e2929b646aaea2a91a4a1687
   m_configObjects: {}
