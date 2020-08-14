@@ -95,11 +95,13 @@ public class PlayerController : MonoBehaviour
     public void DIE()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        
     }
 
     public void NextLevel(string scene)
     {
-        SceneManager.LoadScene(scene);
+        //SceneManager.LoadScene(scene);
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
     }
 
     private void OnTriggerStay2D(Collider2D collision)
