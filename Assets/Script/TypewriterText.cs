@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using TMPro.Examples;
+using UnityEditor.Experimental.GraphView;
 
 public class TypewriterText : MonoBehaviour
 {
@@ -11,17 +13,43 @@ public class TypewriterText : MonoBehaviour
     public string textToRead;
     string texttoToUpdate;
     int i = 1;
-    TextMeshProUGUI textBox;
+    TextMeshPro textBox;
     public float textFade = 1f;
     AudioSource audio;
     public bool shouldDelete = false;
+    public bool hasFirstDeathMessage;
+    public string fistDeathMessage = "";
+    public bool hasNumber = false;
+    int number;
+    public string afterNumber = "";
+
  
     // Start is called before the first frame update
     private void Start()
     {
         speedHelper = readingSpeed;
-        textBox = FindObjectOfType<TextMeshProUGUI>();
+        textBox = FindObjectOfType<TextMeshPro>();
         audio = GetComponent<AudioSource>();
+        number = 5294 - Blackboard.deathCounter * 7;
+        if (hasNumber)
+        {
+            textToRead = textToRead + number.ToString() + afterNumber;
+        }
+        
+        if (!Blackboard.shouldReadStory)
+        {
+            textBox.text = preTextToRead + textToRead;
+            if (!hasFirstDeathMessage)
+            {
+                Destroy(gameObject);
+            }
+            else
+            {
+                preTextToRead = textToRead;
+                textToRead = fistDeathMessage;
+            }
+            
+        }
     }
 
     
@@ -29,6 +57,7 @@ public class TypewriterText : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+
         speedHelper -= Time.deltaTime;
         if (speedHelper <=0)
         {

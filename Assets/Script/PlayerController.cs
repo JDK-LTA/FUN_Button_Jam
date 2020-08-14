@@ -6,7 +6,7 @@ using UnityEngine.SceneManagement;
 public class PlayerController : MonoBehaviour
 {
     public float speed;
-    public float moveHorizontal = 1;
+    public float moveHorizontal = 0;
     //public GameObject lworld;
     //public GameObject dworld;
     SpriteRenderer playerRenderer;
@@ -19,11 +19,11 @@ public class PlayerController : MonoBehaviour
     bool exitedZoomZone;
     Vector3 targetCamera;
     private Vector3 velocity;
+    
 
     // Start is called before the first frame update
     void Start()
     {
-        Time.timeScale = 0;
         playerRenderer = GetComponentInChildren<SpriteRenderer>();
         WMRef = FindObjectOfType<WorldManager>();
         anim = transform.GetComponentInChildren<Animator>();
@@ -37,9 +37,9 @@ public class PlayerController : MonoBehaviour
     {
         if (Input.GetKeyDown("space"))
         {
-            if (Time.timeScale == 0)
+            if (moveHorizontal == 0)
             {
-                Time.timeScale = 1;
+                moveHorizontal = 1;
             }
             else
             {
@@ -107,6 +107,9 @@ public class PlayerController : MonoBehaviour
 
     public void DIE()
     {
+        Blackboard.shouldReadStory = false;
+        Blackboard.deathCounter++;
+        Blackboard.firstDeath = true;
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
         
     }
@@ -114,6 +117,8 @@ public class PlayerController : MonoBehaviour
     public void NextLevel(string scene)
     {
         //SceneManager.LoadScene(scene);
+        Blackboard.shouldReadStory = true;
+        Blackboard.firstDeath = false;
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
     }
 

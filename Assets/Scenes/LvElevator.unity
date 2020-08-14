@@ -1234,7 +1234,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2151805291434779672, guid: 3dd0cf23b1c655d48ba197e603a68ba1, type: 3}
       propertyPath: moveHorizontal
-      value: -1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2151805291434779674, guid: 3dd0cf23b1c655d48ba197e603a68ba1, type: 3}
       propertyPath: m_LocalPosition.x
