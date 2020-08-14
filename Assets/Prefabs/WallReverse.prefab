@@ -13,7 +13,6 @@ GameObject:
   - component: {fileID: 5386872830502492240}
   - component: {fileID: 5386872830502492247}
   - component: {fileID: 4561746866103390133}
-  - component: {fileID: 8766426445908117351}
   m_Layer: 0
   m_Name: WallReverse
   m_TagString: Untagged
@@ -141,29 +140,3 @@ MonoBehaviour:
   ActiveColor: {r: 1, g: 1, b: 1, a: 1}
   UnactiveColor: {r: 0, g: 0, b: 0, a: 1}
   World: 0
---- !u!61 &8766426445908117351
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5386872830502492245}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1, y: 1}
-    newSize: {x: 1, y: 1}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 0.99, y: 0.99}
-  m_EdgeRadius: 0
