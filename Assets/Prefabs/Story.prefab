@@ -84,11 +84,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a34d6ddb852b07440a09a035e61c216a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  readingSpeed: 0.1
+  readingSpeed: 0.08
   preTextToRead: 
   textToRead: Children are delicious meals
   textFade: 1
   shouldDelete: 0
+  hasFirstDeathMessage: 0
+  fistDeathMessage: 
+  hasNumber: 0
+  afterNumber: 
 --- !u!82 &7701796418597873388
 AudioSource:
   m_ObjectHideFlags: 0
