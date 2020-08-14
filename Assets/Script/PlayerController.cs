@@ -51,7 +51,20 @@ public class PlayerController : MonoBehaviour
 
 
         }
+        if (Input.GetKeyDown("r"))
+        {
+            DIE();
+        }
 
+        if (Input.GetKeyDown("p"))
+        {
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+        }
+
+        if (Input.GetKeyDown("o"))
+        {
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex - 1);
+        }
         transform.Translate(Vector3.right * moveHorizontal * Time.deltaTime * speed);
         CameraControlZoom();
 
