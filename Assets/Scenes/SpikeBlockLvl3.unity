@@ -776,6 +776,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: LevelEnd (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 7575522302477014002, guid: 0ab43e2a6c8cfc54ba268ff884eeef35, type: 3}
+      propertyPath: sceneToLoad
+      value: EndScene
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0ab43e2a6c8cfc54ba268ff884eeef35, type: 3}
 --- !u!1001 &851963691
