@@ -438,7 +438,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: THE FANCY DIDDLER
+  m_text: Switcher
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 757d8a9cedb53dc4fae98fc02f56f5f8, type: 2}
   m_sharedMaterial: {fileID: 6551325623984145985, guid: 757d8a9cedb53dc4fae98fc02f56f5f8, type: 2}
@@ -465,8 +465,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 52.67
-  m_fontSizeBase: 52.67
+  m_fontSize: 82.04
+  m_fontSizeBase: 82.04
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -854,7 +854,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'RetardTeam
+  m_text: 'BassBoostedFly Team
 
     Presents'
   m_isRightToLeft: 0
@@ -988,6 +988,10 @@ PrefabInstance:
       propertyPath: targetZoom
       value: 10
       objectReference: {fileID: 0}
+    - target: {fileID: 5145914606574280872, guid: 9627874c7bf8d6a4b98e523d3b97ae47, type: 3}
+      propertyPath: transitionSpeed
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5145914606574280873, guid: 9627874c7bf8d6a4b98e523d3b97ae47, type: 3}
       propertyPath: m_Name
       value: ZoomObject (1)
@@ -1038,11 +1042,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5145914606574280875, guid: 9627874c7bf8d6a4b98e523d3b97ae47, type: 3}
       propertyPath: m_Offset.x
-      value: -0.06332922
+      value: 5.80252
       objectReference: {fileID: 0}
     - target: {fileID: 5145914606574280875, guid: 9627874c7bf8d6a4b98e523d3b97ae47, type: 3}
       propertyPath: m_Size.x
-      value: 18.402088
+      value: 38.257782
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9627874c7bf8d6a4b98e523d3b97ae47, type: 3}
@@ -1123,6 +1127,10 @@ PrefabInstance:
       propertyPath: m_LocalPosition.y
       value: 11.97
       objectReference: {fileID: 0}
+    - target: {fileID: 5145914606574280872, guid: 9627874c7bf8d6a4b98e523d3b97ae47, type: 3}
+      propertyPath: transitionSpeed
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5145914606574280873, guid: 9627874c7bf8d6a4b98e523d3b97ae47, type: 3}
       propertyPath: m_Name
       value: ZoomObject
@@ -1173,11 +1181,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5145914606574280875, guid: 9627874c7bf8d6a4b98e523d3b97ae47, type: 3}
       propertyPath: m_Offset.x
-      value: 0.029201508
+      value: -2.1279907
       objectReference: {fileID: 0}
     - target: {fileID: 5145914606574280875, guid: 9627874c7bf8d6a4b98e523d3b97ae47, type: 3}
       propertyPath: m_Size.x
-      value: 43.885727
+      value: 53.323463
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9627874c7bf8d6a4b98e523d3b97ae47, type: 3}

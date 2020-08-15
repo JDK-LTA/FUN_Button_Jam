@@ -13,7 +13,7 @@ public class WorldManager : MonoBehaviour
         objects = FindObjectsOfType<WorldConfigurator>();
         playerRenderer = FindObjectOfType<PlayerController>().GetComponentInChildren<SpriteRenderer>();
         Transition();
-
+        Cursor.visible = false;
     }
 
     private void Transition()
