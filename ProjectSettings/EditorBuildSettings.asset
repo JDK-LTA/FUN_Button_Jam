@@ -53,4 +53,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/SpikeBlockLvl3.unity
     guid: 728c7995e2929b646aaea2a91a4a1687
+  - enabled: 1
+    path: Assets/Scenes/EndScene.unity
+    guid: e40cf462a6afb7b4f8cdb1f3f5441088
   m_configObjects: {}
